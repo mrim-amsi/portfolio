@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مريم العمصي | مطورة ويب 3D</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.28/build/spline-viewer.js"></script>
+
+    <style>
+        :root {
+            --primary: #00f2ff;
+            --accent: #ffcc00;
+            --bg: #050505;
+            --glass: rgba(255, 255, 255, 0.03);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: white;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* حاوية الـ 3D الخلفية */
+        .background-3d {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 1; 
+            pointer-events: none; 
+        }
+
+        .main-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 120px 8%;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        /* تنسيق الـ Typewriter */
+        .typewriter-container {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: var(--primary);
+            min-height: 1.5em;
+            font-weight: 700;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            background-color: var(--primary);
+            margin-right: 5px;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .project-card {
+            background: var(--glass);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 28px;
+            overflow: hidden;
+            backdrop-filter: blur(20px);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        .project-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 50px rgba(0, 242, 255, 0.15);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 255px; /* تم التعديل حسب طلبك */
+            object-fit: cover;
+            background: #111;
+            transition: 0.5s;
+        }
+
+        .project-info {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-info h3 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 1.5rem;
+        }
+
+        .project-info p {
+            color: #bbb;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn-link {
+            padding: 12px 20px;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .btn-link:hover {
+            background: var(--primary);
+            color: black;
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+        }
+
+        .btn-whatsapp {
+            padding: 12px 25px;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: #555;
+        }
+
+        .reveal { opacity: 0; transform: translateY(30px); }
+    </style>
+</head>
+<body>
+
+    <div class="background-3d">
+        <spline-viewer url="https://prod.spline.design/6Wq1Q7YMGInY6zS0/scene.splinecode"></spline-viewer>
+    </div>
+
+    <div class="main-content">
+        <nav>
+            <a href="#" class="logo">MARYAM AL-AMSI</a>
+            <a href="https://wa.me/972598695954" target="_blank" class="btn-whatsapp">
+                تواصل واتساب
+            </a>
+        </nav>
+
+        <section class="hero">
+            <h1 class="reveal">مريم العمصي</h1>
+            <div class="typewriter-container reveal">
+                <span id="typewriter"></span><span class="cursor">|</span>
+            </div>
+            
+            <p class="reveal" style="font-size: 1.3rem; max-width: 700px; color: #aaa; margin-top: 20px;">
+                متخصصة في بناء وتطوير الأنظمة البرمجية المتكاملة، من المواقع الإخبارية الكبرى إلى المنصات التعليمية ولوحات التحكم الذكية.
+            </p>
+            <div class="reveal">
+                <a href="#work" style="padding: 18px 50px; background: var(--primary); color: #000; text-decoration: none; border-radius: 50px; font-weight: 900; margin-top: 30px; display: inline-block;">استكشف المشاريع ↓</a>
+            </div>
+        </section>
+
+        <section id="work">
+            <h2 class="reveal" style="font-size: 2.8rem; margin-bottom: 50px; border-right: 6px solid var(--primary); padding-right: 20px;">معرض الأعمال المختارة</h2>
+            
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <img src="image/a.png" alt="Restaurant Orionlens" class="project-img">
+                    <div class="project-info">
+                        <h3>Restaurant Orionlens</h3>
+                        <p>نظام مطعم متكامل مع لوحة تحكم ذكية لإدارة العمليات والطلبات بفعالية عالية.</p>
+                        <a href="https://mrim-amsi.github.io/restaurant_orionlens" target="_blank" class="btn-link">زيارة الموقع الحية ←</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="image/d.png" alt="Hurghada 24" class="project-img">
+                    <div class="project-info">
+                        <h3>الغردقة 24 للأخبار</h3>
+                        <p>منصة إخبارية ضخمة تغطي أخبار مدينة الغردقة، تركز على سرعة الأداء وتجربة المستخدم.</p>
+                        <a href="https://hurghada24.net/" target="_blank" class="btn-link">زيارة الموقع الحية ←</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="image/c.png" alt="RPI" class="project-img">
+                    <div class="project-info">
+                        <h3>معهد الرياض التقني</h3>
+                        <p>الموقع الرسمي للمعهد، واجهة تعليمية تفاعلية تخدم الطلاب والمدربين بأنظمة تسجيل حديثة.</p>
+                        <a href="https://rpi.edu.sa/" target="_blank" class="btn-link">زيارة الموقع الحية ←</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://mamsi.42web.io/cdn/projects/screencapture-blog-teejangold-2023-01-24-19_06_391.png" alt="Tejan Gold" class="project-img">
+                    <div class="project-info">
+                        <h3>تيجان جولد للعسل</h3>
+                        <p>متجر إلكتروني فاخر يعرض منتجات العسل الطبيعي بتصميم جذاب وتجربة تسوق سلسة.</p>
+                        <a href="#" class="btn-link">قيد العرض</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>مريم العمصي © 2026 | تطوير مواقع ويب احترافية</p>
+        </footer>
+    </div>
+
+    <script>
+        // مصفوفة الكلمات لحركة الكتابة
+        const words = ["Web Developer", "Full Stack Developer", "Software Engineer"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typeSpeed = 150;
+        const deleteSpeed = 100;
+        const pauseTime = 2000;
+
+        function type() {
+            const currentWord = words[wordIndex];
+            const typewriterElement = document.getElementById("typewriter");
+
+            if (isDeleting) {
+                typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let currentSpeed = isDeleting ? deleteSpeed : typeSpeed;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                isDeleting = true;
+                currentSpeed = pauseTime;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                currentSpeed = 500;
+            }
+
+            setTimeout(type, currentSpeed);
+        }
+
+        window.addEventListener('load', () => {
+            gsap.registerPlugin(ScrollTrigger);
+            
+            // بدء حركة الكتابة
+            type();
+
+            // تحريكات الظهور
+            gsap.to(".reveal", {
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                stagger: 0.3,
+                ease: "power4.out"
+            });
+
+            gsap.to(".project-card", {
+                scrollTrigger: {
+                    trigger: ".projects-grid",
+                    start: "top 85%",
+                },
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: "power2.out"
+            });
+        });
+    </script>
+</body>
+</html>
