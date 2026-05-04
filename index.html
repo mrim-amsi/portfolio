@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://my-portfolio-jade-xi-91.vercel.app/#home -->
+<html lang="ar" dir="rtl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./files/style.css">
+    <title>Mariam Alamssi</title>
+    <link rel="shortcut icon" type="image" href="https://my-portfolio-jade-xi-91.vercel.app/images/USER-SOLID-preview.png">
+    <link rel="stylesheet" href="./files/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./files/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./files/style(1).css">
+    <link rel="stylesheet" href="./files/all.css">
+    <link rel="stylesheet" href="./files/lightbox.css">
+    <link rel="stylesheet" href="./files/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/dist/line-awesome/css/line-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+    .whats-chat {
+    position: fixed;
+    bottom: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    z-index: 1050;
+    font-family: 'JFFlat';
+}
+.whats-chat .icon {
+    display: block;
+    border-radius: 0 !important;
+    color: #fff !important;
+    width: 100% !important;
+    height: 62px !important;
+    background: #2BB141 !important;
+    border: 0 !important;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, .15) 0 3px 12px;
+    padding: 15px 10px;
+    white-space: nowrap;
+}
+.whats-chat .icon i::after {
+    content: " راسالنا على الواتس اب";
+    color: #fff;
+    font-size: 30px;
+    font-family: DroidKufi !important;
+}
+.whats-chat .icon i {
+    font-size: 30px;
+}
+    :root {
+            /* --primary: #e83e8c; 
+            --bg: #050505;
+            --glass: rgba(255, 255, 255, 0.03); */
+            --cube-color: #25d366;
+            --whatsapp: #25d366;
+            --facebook: #1877f2;
+            --instagram: #ff00ff;
+        }
+         /* ==================== المشاريع ==================== */
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 50px; }
+        .project-card { background: var(--glass); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 28px; overflow: hidden; backdrop-filter: blur(20px); opacity: 0; transform: translateY(40px); transition: 0.4s; }
+        .project-card {
+            border-color: #e83e8c;
+        }
+          .project-card:hover {
+            transform: translateY(-15px);
+          
+            box-shadow: 0 20px 50px rgba(57, 255, 20, 0.2);
+        }
+        .project-info p {
+            color: #bbb;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        .project-img { width: 100%; height: 255px; object-fit: cover; }
+        .project-info { padding: 25px; }
+.btn-link {
+            padding: 12px 20px;
+            border: 1px solid #e83e8c;
+            color: #e83e8c;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .btn-link:hover {
+            background: #e83e8c;
+            color: #fff;
+            box-shadow: 0 0 20px rgba(57, 255, 20, 0.6);
+        }
+
+
+      .social-hero-grid { display: flex; gap: 30px; margin: 30px 0; perspective: 1000px; justify-content: center; }
+        .social-cube-wrapper { position: relative; width: 45px; height: 45px; transform-style: preserve-3d; transform: rotateX(-57deg) rotateY(-33deg); transition: 0.5s; cursor: pointer; }
+        .social-cube-wrapper:hover { transform: rotateX(-57deg) rotateY(-33deg) translateZ(15px); }
+        
+        .cube-face { position: absolute; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; border: 1px solid rgba(255,255,255,0.1); }
+        .face-top { transform: rotateX(90deg) translateZ(22.5px); background: rgba(255,255,255,0.1); backdrop-filter: blur(5px); }
+        .face-front { height: 22px; transform: translateZ(22.5px); background: var(--glow-color); opacity: 0.4; box-shadow: 0 0 15px var(--glow-color); }
+        .face-right { height: 22px; transform: rotateY(90deg) translateZ(22.5px); background: var(--glow-color); opacity: 0.2; }
+
+        .whatsapp { --glow-color: var(--whatsapp); } .facebook { --glow-color: var(--facebook); } .instagram { --glow-color: #ff00ff; }
+        .whatsapp .face-top { color: var(--whatsapp); } .facebook .face-top { color: var(--facebook); } .instagram .face-top { color: #ff00ff; }
+        body { direction: rtl; text-align: right; }
+</style>   
+
+</head>
+
+<body>
+
+    <!-- loading  -->
+
+
+    <!-- icon menu / lite and dark -->
+
+    <div class="icone-menu">
+        <i class="fa-solid fa-bars" id="icon-menu"></i>
+    </div>
+    
+    <!-- <a href="https://my-portfolio-jade-xi-91.vercel.app/#home"><i class="fa-solid fa-arrow-up"></i></a> -->
+
+    <div class="moon-light" id="moon">
+        <i class="fa-solid fa-sun" id="sun"></i>
+        <i class="fa-solid fa-moon" id="moonn"></i>
+        
+    </div>
+
+
+    <!-- side bar start -->
+
+
+    <section class="sidebar">
+        <div class="top-sidebar">
+            <div class="box">
+                <div class="content-animat">
+                    <img src="./me.png">
+
+                </div>
+            </div>
+            <h3><span>M</span>ariam <span>A</span>lamssi</h3>
+            <div class="linkat">
+
+                <div class="div-link-sos">  <a href="https://www.facebook.com/mrimamsi/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+                <div class="div-link-sos">   <a href="https://wa.me/972598695954" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></div>
+                <div class="div-link-sos">   <a href="https://www.instagram.com/merriamamsi/" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+                <div class="div-link-sos">  <a href="https://github.com/mrim-amsi/" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+                <div class="div-link-sos">  <a href="https://www.linkedin.com/in/merriam-amsi/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></div>
+               
+            </div>
+
+
+
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a class="active" href="#home"><i class="fa-solid fa-home"></i>الرئيسية</a></li>
+                <li><a href="#about" class=""><i class="fa-solid fa-user"></i>من أنا</a></li>
+                <li><a href="#portfolio" class=""><i class="fa-solid fa-address-book"></i>المشاريع</a></li>
+                <li><a href="#contact" class=""><i class="fa-solid fa-envelope"></i>تواصل</a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- side bar end -->
+
+    <!-- home start -->
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>Mariam Alamssi</h3>
+            <p><span class="typed-text"> </span>
+                <span class="cursor">&nbsp;</span>
+            </p>
+
+            <p class="border-5 shadow-lg border-end border-start rounded-3  w-75 text-center mt-5 downcs">
+               
+                    <a target="_blank" href="https://mrim-amsi.github.io/myportfolio/image/cv.pdf" download="mariam-alamssi-cv.pdf" class="text-white fs-3">تحميل السيرة الذاتية</a>
+               
+            </p>
+        </div>
+    </section>
+
+    <!-- home end -->
+
+    <!-- about start -->
+    <section class="about" id="about">
+       <div class="mg-left">
+        <div class="top-sec">
+            <h3>من أنا</h3>
+        </div>
+
+         <div class="abount-content showsec show">
+            <div class="about-left showscal showsc">
+                <div class="content-flex">
+                    <p>
+                       
+                        مطور ويب محترف بخبرة قوية في بناء تطبيقات ويب حديثة وسريعة وقابلة للتوسع. أركز على كتابة كود نظيف وسهل الصيانة، وتنفيذ واجهات متجاوبة، وتسليم موثوق ضمن فرق أجايل. لدي مهارة في تحويل تصميمات واجهة المستخدم إلى واجهات دقيقة، ودمج واجهات برمجة التطبيقات، وتحسين الأداء.
+
+
+                    <br><br>
+                        </p>
+                </div>
+                <div class="about-buttons">
+                    <a href="tel:+972598695954" class="about-btn about-btn-dark">اتصل بي</a>
+                    <a href="https://mrim-amsi.github.io/myportfolio/image/cv.pdf" target="_blank" class="about-btn about-btn-light">سيرة ذاتية</a>
+                </div>
+                <div class="about-logos">
+                    <img src="./image 419.png" alt="logo 419" class="about-logo about-logo-1">
+                    <img src="./image 428.png" alt="logo 428" class="about-logo about-logo-2">
+                    <img src="./image 427.png" alt="logo 427" class="about-logo about-logo-3">
+                    <img src="./image 429.png" alt="logo 429" class="about-logo about-logo-4">
+                </div>
+            </div>
+            <div class="about-right">
+                <div class="about-image-shadow"></div>
+                <div class="about-image-circle">
+                    <img src="./me3.png" alt="Mariam Alamssi">
+                </div>
+            </div>
+        </div>
+       </div> 
+
+           <!-- skills start -->
+
+    <div class="skills">
+        <div class="mg-left">
+            <div class="top-sec">
+                <h3>المهارات</h3>
+                <div class="all-skills row g-3 mt-5 showsec show">
+
+                        <div class="col-md-4 col-lg-3   col-sm-6">
+                         <div class="d-flex  bg-white shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
+                            <i class="fa-brands fa-laravel text-danger skillSize pe-4"></i>
+                            <p class="align-items-end m-0 fw-bold"> Laravel </p>
+                        </div>
+                    </div>
+                     <div class="col-md-4 col-lg-3   col-sm-6">
+                         <div class="d-flex  bg-white shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
+                            <i class="fa-brands fa-react text-info   skillSize pe-4"></i>
+                            <p class="align-items-end m-0 fw-bold"> React </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-sm-6">
+                        <div class="d-flex  bg-white  shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
+                            <i class="fa-brands fa-wordpress bootstrapColor skillSize pe-4"></i>
+                            <p class="align-items-end m-0 fw-bold"> WordPress </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-sm-6">
+                         <div class="d-flex  bg-white shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
+                            <i class="fa-brands fa-css3 text-info skillSize pe-4"></i>
+                            <p class="align-items-end m-0 fw-bold"> CSS3 </p>
+                        </div>
+                    </div>
+                    <div class="  col-md-4 col-lg-3 col-sm-6">
+                         <div class="d-flex  bg-white shadow-lg justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
+                            <i class="fa-brands fa-js-square text-warning skillSize pe-4"></i>
+                            <p class="align-items-end m-0 fw-bold"> JavaScript </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3   col-sm-6">
+                         <div class="d-flex  bg-white shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
+                            <i class="fa-brands fa-bootstrap bootstrapColor  skillSize pe-4"></i>
+                            <p class="align-items-end m-0 fw-bold"> Bootstrap5 </p>
+                        </div>
+                    </div>
+                    
+                   
+                    
+                    <div class="col-md-4 col-lg-3   col-sm-6">
+                         <div class="d-flex  bg-white shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
+                            <i class="fa-brands fa-git-alt text-danger   skillSize pe-4"></i>
+                            <p class="align-items-end m-0 fw-bold">git</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3   col-sm-6">
+                         <div class="d-flex  bg-white shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
+                            <i class="fa-brands fa-npm text-danger   skillSize pe-4"></i>
+                            <p class="align-items-end m-0 fw-bold">NPM</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3   col-sm-6">
+                         <div class="d-flex  bg-white shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
+                            <i class="fa-brands fa-github text-secondary   skillSize pe-4"></i>
+                            <p class="align-items-end m-0 fw-bold">github</p>
+                        </div>
+                    </div>
+
+
+
+     
+                    
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  skills end -->
+    </section>
+
+
+
+    <!-- about end -->
+
+
+
+ 
+
+    <!-- prtofile start -->
+
+    <section class="portfolio" id="portfolio">
+     <div class="mg-left">
+        <div class="top-sec">
+            <h3>المشاريع</h3>
+        </div>
+
+        <div class="project"> <!-- class showscal -->
+            <!-- <div class="project-menu showscal showsc">
+                <ul>
+                    <li data-cat=".all-m" class="active">All</li>
+                    <li data-cat=".landing">Landing Page</li>
+                    <li data-cat=".shop">Shop</li>
+                    <li data-cat=".javascript">JavaScript</li>
+                   
+                    
+                </ul>
+            </div> -->
+
+          <section id="work">
+            
+            
+            <div class="projects-grid">
+                <div class="project-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                    <img src="image/a.png" alt="Restaurant Orionlens" class="project-img">
+                    <div class="project-info">
+                        <h3> مطعم بت برجر </h3>
+                        <p>نظام مطعم متكامل مع لوحة تحكم ذكية لإدارة العمليات والطلبات بفعالية عالية.</p>
+                        <a href="https://mrim-amsi.github.io/rf" target="_blank" class="btn-link">زيارة الموقع الحية ←</a>
+                    </div>
+                </div>
+
+                <div class="project-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                    <img src="image/b.png" alt="Hurghada 24" class="project-img">
+                    <div class="project-info">
+                        <h3>الغردقة 24 للأخبار</h3>
+                        <p>منصة إخبارية ضخمة تغطي أخبار مدينة الغردقة، تركز على سرعة الأداء وتجربة المستخدم.</p>
+                        <a href="https://hurghada24.net/" target="_blank" class="btn-link">زيارة الموقع الحية ←</a>
+                    </div>
+                </div>
+
+                <div class="project-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                    <img src="image/as.png" alt="RPI" class="project-img">
+                    <div class="project-info">
+                        <h3>معهد الرياض التقني</h3>
+                        <p>الموقع الرسمي للمعهد، واجهة تعليمية تفاعلية تخدم الطلاب والمدربين بأنظمة تسجيل حديثة.</p>
+                        <a href="https://rpi.edu.sa/" target="_blank" class="btn-link">زيارة الموقع الحية ←</a>
+                    </div>
+                </div>
+
+                <div class="project-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                    <img src="image/c.png" alt="Tejan Gold" class="project-img">
+                    <div class="project-info">
+                        <h3>متجر إلكتروني</h3>
+                        <p>متجر إلكتروني فاخر يعرض منتجات بتصميم جذاب وتجربة تسوق سلسة.</p>
+                      <a href="https://cnt-cotton.kulshy.online/ar" target="_blank" class="btn-link">زيارة الموقع الحية ←</a>
+
+                    </div></div>
+                    <div class="project-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                    <img src="image/n.jpg" alt="Restaurant Orionlens" class="project-img">
+                    <div class="project-info">
+                        <h3>أدارة طلبات مطعم</h3>
+                        <p>نظام مطعم متكامل مع لوحة تحكم ذكية لإدارة العمليات والطلبات بفعالية عالية.</p>
+                        <a href="#" class="btn-link">قيد العرض</a>
+                    </div>
+                </div>
+                <div class="project-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                    <img src="image/z.jpg" alt="Restaurant Orionlens" class="project-img">
+                    <div class="project-info">
+                        <h3>متجر الكترونيات </h3>
+                        <p>نظام مطعم متكامل مع لوحة تحكم ذكية لإدارة العمليات والطلبات بفعالية عالية.</p>
+                        <a href="#" class="btn-link">قيد العرض</a>
+                    </div>
+                </div>
+                <div class="project-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                    <img src="image/m.png" alt="Restaurant Orionlens" class="project-img">
+                    <div class="project-info">
+                        <h3>لوحة تحكم طلبات ممنون </h3>
+                        <p>نظام مطعم متكامل مع لوحة تحكم ذكية لإدارة العمليات والطلبات بفعالية عالية.</p>
+                        <a href="#" class="btn-link">قيد العرض</a>
+                    </div>
+                </div>
+                <div class="project-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                    <img src="image/g.png" alt="Restaurant Orionlens" class="project-img">
+                    <div class="project-info">
+                        <h3>شركة ممنون </h3>
+                        <p>نظام مطعم متكامل مع لوحة تحكم ذكية لإدارة العمليات والطلبات بفعالية عالية.</p>
+                        <a href="#" class="btn-link">قيد العرض</a>
+                    </div>
+                </div>
+                    <div class="project-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                    <img src="image/v.jpg" alt="Restaurant Orionlens" class="project-img">
+                    <div class="project-info">
+                        <h3>مطعم براسا  </h3>
+                        <p>نظام مطعم متكامل مع لوحة تحكم ذكية لإدارة العمليات والطلبات بفعالية عالية.</p>
+                        <a href="#" class="btn-link">قيد العرض</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section> 
+           
+            <!-- <div class="all-project">
+
+                <div class="box-project showsec left all-m shop javascript show">
+                    <img src="./files/E-Commerce-photo.png" alt="Ecommerce-App">
+                    <div class="link-project">
+                        <div> <span class="d-flex justify-content-between"><span> <a href="https://github.com/Ahmed-Abdelbast/Ahmed-E-Commerce" class="ps-4" target="_blank"> code <i class="fa-solid fa-link"></i></a></span> <span> <a href="https://ahmed-e-commerce.vercel.app/" target="_blank" class="pe-4">Live <i class="fa-solid fa-link"></i></a> </span> </span></div>
+                    </div>
+                </div>
+                <div class="box-project showsec left all-m shop javascript show">
+                    <img src="./files/portfolio.png" alt="Ecommerce-App">
+                    <div class="link-project">
+                        <div> <span class="d-flex justify-content-between"><span> <a href="https://github.com/Ahmed-Abdelbast/My-Portfolio" class="ps-4" target="_blank"> code <i class="fa-solid fa-link"></i></a></span> <span> <a href="https://my-portfolio-jade-xi-91.vercel.app/" target="_blank" class="pe-4">Live <i class="fa-solid fa-link"></i></a> </span> </span></div>
+                    </div>
+                </div>
+
+                <div class="box-project showsec center all-m shop landing show">
+                    <img src="./files/mealify.png" alt="restaurant">
+                    <div class="link-project">
+                       <div> <span class="d-flex justify-content-between"><span> <a href="https://github.com/Ahmed-Abdelbast/Mealify" class="ps-4" target="_blank"> code <i class="fa-solid fa-link"></i></a></span> <span> <a href="https://ahmed-abdelbast.github.io/Mealify/" target="_blank" class="pe-4">Live <i class="fa-solid fa-link"></i></a> </span> </span></div>
+                    </div>
+                </div>
+
+                <div class="box-project showsec right all-m landing show">
+                    <img src="./files/qurank.png" alt="Travel">
+                    <div class="link-project">
+                        <div> <span class="d-flex justify-content-between"><span> <a href="https://github.com/Ahmed-Abdelbast/Qurank" class="ps-4" target="_blank"> code <i class="fa-solid fa-link"></i></a></span> <span> <a href="https://qurank-iko8ocp9m-ahmed-abdelbasts-projects.vercel.app/" target="_blank" class="pe-4">Live <i class="fa-solid fa-link"></i></a> </span> </span></div>
+                    </div>
+                </div>
+
+                <div class="box-project showsec left all-m shop landing show">
+                    <img src="./files/profile.png" alt="Coffee">
+                    <div class="link-project">
+                        <div> <span class="d-flex justify-content-between"><span> <a href="https://github.com/Ahmed-Abdelbast/portfolio" class="ps-4" target="_blank"> code <i class="fa-solid fa-link"></i></a></span> <span> <a href="https://portfolio-psi-ten-16.vercel.app/" target="_blank" class="pe-4">Live <i class="fa-solid fa-link"></i></a> </span> </span></div>
+                    </div>
+                </div>
+
+                <div class="box-project showsec right all-m landing shop javascript show">
+                    <img src="./files/desc.png" alt="Game-Store">
+                    
+                    <div class="link-project">
+                       <div> <span class="d-flex justify-content-between"><span> <a href="https://github.com/Ahmed-Abdelbast/profile" class="ps-4" target="_blank"> code <i class="fa-solid fa-link"></i></a></span> <span> <a href="https://profile-zeta-drab.vercel.app/" target="_blank" class="pe-4">Live <i class="fa-solid fa-link"></i></a> </span> </span></div>
+                    </div>
+
+                    
+                </div>
+
+
+
+                <div class="box-project showsec left all-m landing show">
+                    <img src="./files/Weather.png" alt="my-website">
+                    <div class="link-project">
+                        <div> <span class="d-flex justify-content-between"><span> <a href="https://github.com/Ahmed-Abdelbast/Weather" class="ps-4" target="_blank"> code <i class="fa-solid fa-link"></i></a></span> <span> <a href="https://ahmed-abdelbast.github.io/Weather/" target="_blank" class="pe-4">Live <i class="fa-solid fa-link"></i></a> </span> </span></div>
+                    </div>
+                </div>
+            </div> -->
+
+            
+        </div>
+        
+     </div>
+    </section>
+    <!-- protfileo end -->
+
+
+
+
+
+    <!-- contact start -->
+
+    <section class="contact" id="contact">
+       <div class="mg-left">
+        <div class="top-sec">
+            <h3>contact</h3>
+        </div>
+        <div class="all-title" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+">
+            
+            
+            <div class="social-hero-grid reveal" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                    <a href="https://wa.me/972598695954" target="_blank" class="social-cube-wrapper whatsapp">
+                        <div class="cube-face face-top"><i class="fab fa-whatsapp"></i></div>
+                        <div class="cube-face face-front"></div><div class="cube-face face-right"></div>
+                    </a>
+                    <a href="https://www.facebook.com/mrimamsi/" target="_blank" class="social-cube-wrapper facebook">
+                        <div class="cube-face face-top"><i class="fab fa-facebook-f"></i></div>
+                        <div class="cube-face face-front"></div><div class="cube-face face-right"></div>
+                    </a>
+                    <a href="https://www.instagram.com/merriamamsi/" target="_blank" class="social-cube-wrapper instagram">
+                        <div class="cube-face face-top"><i class="fab fa-instagram"></i></div>
+                        <div class="cube-face face-front"></div><div class="cube-face face-right"></div>
+                    </a>
+                </div>
+         
+        </div>
+       </div>
+        
+    </section>
+
+    <footer class="footer text-center ms-5">
+
+       <!-- <p class=" fs-4">
+        Build by <span class="text-info">M</span>a<span class="text-info">riam</span> Al<span class="text-info">amssi</span> ♡
+       </p> -->
+
+    </footer>
+
+
+
+    <!-- contact end -->
+
+    <section class="loader-lo" id="preloader" style="display: none;">
+        <div class="loader">
+            <span>LOADING</span>
+        </div>
+
+    </section>
+
+
+
+    <!-- home end -->
+    <script src="./files/swiper-bundle.min.js.download"></script>
+    
+    <script src="./files/lightbox-plus-jquery.js.download"></script>
+    <script src="./files/jquery-3.6.1.min.js.download"></script>
+    <script src="./files/bootstrap.bundle.min.js.download"></script>
+    <script src="./files/popper.min.js.download"></script>
+    <script src="./files/main(1).js.download"></script>
+    <script src="./files/script.js.download"></script>
+
+<div class="whats-chat">
+<a class="icon" href="https://api.whatsapp.com/send?phone=972598695954" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+</div>
+
+<div id="give-freely-root-bcjindcccaagfpapjjmafapmmgkkhgoa" class="give-freely-root" data-extension-id="bcjindcccaagfpapjjmafapmmgkkhgoa" data-extension-name="JSON Formatter" style="display: block;"><template shadowrootmode="open"><style>
+  :host {
+    all: initial;
+  }
+
+  .gf-scroll-remove::-webkit-scrollbar {
+    border-radius-bottom-right: 15px;
+  }
+
+  button {
+    cursor: pointer;
+    transition: transform 0.1s ease;
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+  .give-freely-close-button:hover {
+    opacity: 0.7;
+  }
+
+  input[type="radio"] {
+    margin-right: 8px;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 1em 0;
+  }
+
+  dialog::backdrop  {
+    background-color: revert;
+  }
+
+  dialog.backdrop-hidden::backdrop  {
+    background-color: transparent;
+  }
+</style><div><div class="gf-app"></div></div></template></div><div id="lightboxOverlay" tabindex="-1" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" tabindex="-1" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""><div class="lb-nav"><a class="lb-prev" aria-label="Previous image" href="https://my-portfolio-jade-xi-91.vercel.app/"></a><a class="lb-next" aria-label="Next image" href="https://my-portfolio-jade-xi-91.vercel.app/"></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div><span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>
