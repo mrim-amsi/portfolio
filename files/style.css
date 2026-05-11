@@ -452,19 +452,20 @@ left: 0;
    
 }
 .icone-menu{
-    width: 40px;
+    width: 50px;
     height: 40px;
     background-color: #e83e8c;
     position: fixed;
-    right: 20px;
+    right: 0;
     top: 20px;
     color: #fff;
     padding: 10px;
-    border-radius: 50%;
     font-size: 25px;
     z-index: 1;
     display: none;
     text-align: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 .icone-menu i{
     position: absolute;
