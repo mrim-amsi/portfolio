@@ -403,6 +403,7 @@ body.dark #sun{
 
 /* home section */
 .home{
+     position: relative;
 background: url(./home.jpeg) no-repeat top fixed;
 width: 100%;
 height: 100vh;
