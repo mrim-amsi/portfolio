@@ -234,37 +234,37 @@
                 <div class="all-skills row g-3 mt-5 showsec show">
 
                         <div class="col-md-4 col-lg-3   col-sm-6">
-                         <div class="d-flex  bg-white shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
+                         <div class="d-flex   shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
                             <i class="fa-brands fa-laravel text-danger skillSize pe-4"></i>
                             <p class="align-items-end m-0 fw-bold"> Laravel </p>
                         </div>
                     </div>
                      <div class="col-md-4 col-lg-3   col-sm-6">
-                         <div class="d-flex  bg-white shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
+                         <div class="d-flex   shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
                             <i class="fa-brands fa-react text-info   skillSize pe-4"></i>
                             <p class="align-items-end m-0 fw-bold"> React </p>
                         </div>
                     </div>
                     <div class="col-md-4 col-lg-3 col-sm-6">
-                        <div class="d-flex  bg-white  shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
+                        <div class="d-flex    shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
                             <i class="fa-brands fa-wordpress bootstrapColor skillSize pe-4"></i>
                             <p class="align-items-end m-0 fw-bold"> WordPress </p>
                         </div>
                     </div>
                     <div class="col-md-4 col-lg-3 col-sm-6">
-                         <div class="d-flex  bg-white shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
+                         <div class="d-flex   shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
                             <i class="fa-brands fa-css3 text-info skillSize pe-4"></i>
                             <p class="align-items-end m-0 fw-bold"> CSS3 </p>
                         </div>
                     </div>
                     <div class="  col-md-4 col-lg-3 col-sm-6">
-                         <div class="d-flex  bg-white shadow-lg justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
+                         <div class="d-flex   shadow-lg justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
                             <i class="fa-brands fa-js-square text-warning skillSize pe-4"></i>
                             <p class="align-items-end m-0 fw-bold"> JavaScript </p>
                         </div>
                     </div>
                     <div class="col-md-4 col-lg-3   col-sm-6">
-                         <div class="d-flex  bg-white shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
+                         <div class="d-flex   shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
                             <i class="fa-brands fa-bootstrap bootstrapColor  skillSize pe-4"></i>
                             <p class="align-items-end m-0 fw-bold"> Bootstrap5 </p>
                         </div>
@@ -273,19 +273,19 @@
                    
                     
                     <div class="col-md-4 col-lg-3   col-sm-6">
-                         <div class="d-flex  bg-white shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
+                         <div class="d-flex   shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
                             <i class="fa-brands fa-git-alt text-danger   skillSize pe-4"></i>
                             <p class="align-items-end m-0 fw-bold">git</p>
                         </div>
                     </div>
                     <div class="col-md-4 col-lg-3   col-sm-6">
-                         <div class="d-flex  bg-white shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
+                         <div class="d-flex   shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
                             <i class="fa-brands fa-npm text-danger   skillSize pe-4"></i>
                             <p class="align-items-end m-0 fw-bold">NPM</p>
                         </div>
                     </div>
                     <div class="col-md-4 col-lg-3   col-sm-6">
-                         <div class="d-flex  bg-white shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
+                         <div class="d-flex   shadow-lg  justify-content-around align-items-center  rounded-3 p-3 ps-5 pe-5">
                             <i class="fa-brands fa-github text-secondary   skillSize pe-4"></i>
                             <p class="align-items-end m-0 fw-bold">github</p>
                         </div>
@@ -487,7 +487,7 @@
     <section class="contact" id="contact">
        <div class="mg-left">
         <div class="top-sec">
-            <h3>contact</h3>
+            <h3>التواصل</h3>
         </div>
         <div class="all-title" style="
     display: flex;
@@ -537,7 +537,6 @@
     </section>
 
 
-
     <!-- home end -->
     <script src="./files/swiper-bundle.min.js.download"></script>
     
@@ -547,6 +546,69 @@
     <script src="./files/popper.min.js.download"></script>
     <script src="./files/main(1).js.download"></script>
     <script src="./files/script.js.download"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var iconMenu = document.getElementById('icon-menu');
+        var sidebar = document.querySelector('.sidebar');
+        var moon = document.getElementById('moon');
+        var bodyEl = document.body;
+        var sunIcon = document.getElementById('sun');
+        var moonIcon = document.getElementById('moonn');
+
+        function applyTheme(theme) {
+          if (theme === 'dark') {
+            bodyEl.classList.add('dark');
+            if (sunIcon) sunIcon.style.display = 'block';
+            if (moonIcon) moonIcon.style.display = 'none';
+          } else {
+            bodyEl.classList.remove('dark');
+            if (sunIcon) sunIcon.style.display = 'none';
+            if (moonIcon) moonIcon.style.display = 'block';
+          }
+        }
+
+        var savedTheme = localStorage.getItem('theme') || 'light';
+        applyTheme(savedTheme);
+
+        if (iconMenu) {
+          iconMenu.addEventListener('click', function() {
+            sidebar.classList.toggle('active');
+            iconMenu.classList.toggle('fa-bars');
+            iconMenu.classList.toggle('fa-xmark');
+          });
+        }
+
+        if (moon) {
+          moon.addEventListener('click', function() {
+            var nextTheme = bodyEl.classList.contains('dark') ? 'light' : 'dark';
+            localStorage.setItem('theme', nextTheme);
+            applyTheme(nextTheme);
+          });
+        }
+
+        document.querySelectorAll('.sidebar .menu a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            if (window.innerWidth <= 992) {
+              sidebar.classList.remove('active');
+              if (iconMenu) {
+                iconMenu.classList.add('fa-bars');
+                iconMenu.classList.remove('fa-xmark');
+              }
+            }
+          });
+        });
+
+        window.addEventListener('resize', function() {
+          if (window.innerWidth > 992) {
+            if (sidebar) sidebar.classList.remove('active');
+            if (iconMenu) {
+              iconMenu.classList.add('fa-bars');
+              iconMenu.classList.remove('fa-xmark');
+            }
+          }
+        });
+      });
+    </script>
 
 <div class="whats-chat">
 <a class="icon" href="https://api.whatsapp.com/send?phone=972598695954" target="_blank">
