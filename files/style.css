@@ -426,6 +426,7 @@ background-position: center;
 background-size: cover;
 top: 0;
 left: 0;
+  position: relative;
 
 
 }
@@ -437,10 +438,11 @@ left: 0;
     right: 0;
     bottom: 0;
     background: rgba(5,13,24,.4);
+   z-index: 1;
 }
 .home .content {
     position: absolute;
-       
+       z-index: 2;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%,-50%);
